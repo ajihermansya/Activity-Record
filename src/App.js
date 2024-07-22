@@ -71,20 +71,27 @@ class App extends React.Component {
 
     return (
       <div className="note-app">
-        <h1>Activity Record</h1>
+      <div class="custom-container">
+          <h2>Activity Record</h2>
+        </div>
+        
         <NotesSearch onSearch={this.handleSearch} />
 
         <h2>Make Notes</h2>
         <NotesInput addNote={this.handleAddNote} />
 
-        <h2>Active Records</h2>
+        <div class="custom-container">
+          <h2>Active Records</h2>
+        </div>
         <NotesLists
           notes={activeNotes}
           onDelete={this.handleDeleteNote}
           onArchive={this.handleArchiveNote}
         />
 
-        <h2>Archives</h2>
+        <div class="custom-container">
+          <h2>Archives</h2>
+        </div>
         <NotesLists
           notes={archivedNotes}
           onDelete={this.handleDeleteNote}
